@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+  awsl-bot:
+    build: .
+    image: registry.cn-beijing.aliyuncs.com/dreamhunter/awsl:bot
+    container_name: awsl-bot
+    restart: always
+    environment:
+      ENV_FILE: .env
+    volumes:
+      - ../.env.local:.env
