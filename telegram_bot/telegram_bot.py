@@ -6,7 +6,6 @@ import telebot
 import threading
 
 from retry import retry
-from telebot import apihelper
 
 from telebot.types import InputMediaPhoto
 
@@ -18,7 +17,6 @@ _logger = logging.getLogger(__name__)
 
 # telegram bot
 bot = telebot.TeleBot(settings.telebot_token)
-apihelper.proxy = {'https': settings.http_url}
 lock = threading.Lock()
 failed_key = LRU()
 

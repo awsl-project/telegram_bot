@@ -8,7 +8,6 @@ class Settings(BaseSettings):
     queue: str
     telebot_token: str
     chat_id: str
-    http_url: str
 
     class Config:
         env_file = os.environ.get("ENV_FILE", ".env")
